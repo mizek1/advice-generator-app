@@ -2,12 +2,16 @@ import { useEffect, useState } from 'react';
 import '../styles/main.less';
 
 export default function AdviceCard() {
+  const [id, setId] = useState(0);
   const [quote, setQuote] = useState('');
 
   const generateNewQuote = () => {
     fetch('https://api.adviceslip.com/advice')
       .then((response) => response.json())
-      .then((data) => setQuote(data.slip.advice));
+      .then((data) => {
+        setId(data.slip.id);
+        setQuote(data.slip.advice);
+      });
   };
 
   useEffect(() => {
@@ -16,7 +20,7 @@ export default function AdviceCard() {
 
   return (
     <main>
-      <h1>Advice #117</h1>
+      <h1>Advice #{id}</h1>
       <p>"{quote}"</p>
       <picture>
         <source
