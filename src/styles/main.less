@@ -1,0 +1,67 @@
+@import url('../index.less');
+
+#root {
+  width: 90%;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: @dark-grayish-blue;
+  border-radius: 0.5em;
+  padding: 1em;
+  text-align: center;
+  max-width: 375px;
+
+  h1 {
+    margin: 0;
+    margin-block: 0;
+    font-size: 0.4em;
+    color: @neon-green;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+  }
+
+  p {
+    margin: 0;
+    margin-block: 0;
+    color: @light-cyan;
+    padding: 0.5rem 0;
+  }
+
+  picture {
+    padding-bottom: 1em;
+  }
+
+  button {
+    background-color: @neon-green;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 50px 0px @neon-green;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  main {
+    max-width: 500px;
+  }
+}

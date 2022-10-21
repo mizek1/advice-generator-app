@@ -1,9 +1,7 @@
+import AdviceCard from './components/AdviceCard';
+
 function App() {
-  return (
-    <>
-      <h1>Hello world!</h1>
-    </>
-  );
+  return <AdviceCard />;
 }
 
 export default App;
