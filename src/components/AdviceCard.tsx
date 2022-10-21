@@ -24,13 +24,13 @@ export default function AdviceCard() {
       <p>"{quote}"</p>
       <picture>
         <source
-          srcSet="public/pattern-divider-mobile.svg"
+          srcSet="pattern-divider-mobile.svg"
           media="(max-width: 800px)"
         />
-        <img src="public/pattern-divider-desktop.svg" alt="divider" />
+        <img src="pattern-divider-desktop.svg" alt="divider" />
       </picture>
       <button onClick={generateNewQuote}>
-        <img src="public/icon-dice.svg" alt="refresh" />
+        <img src="icon-dice.svg" alt="refresh" />
       </button>
     </main>
   );
